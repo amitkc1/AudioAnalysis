@@ -25,7 +25,7 @@ public class ReadWavAndPlotGraph
         try
         {
             // Open the wav file specified as the first argument
-            WavFile wavFile = WavFile.openWavFile(new File("/Users/achaudhari/Downloads/AudioAnalysis/Boost_dialogue.wav"));
+            WavFile wavFile = WavFile.openWavFile(new File("/Users/achaudhari/Downloads/AudioAnalysis/ChillingMusic.wav"));
 
             // Display information about the wav file
             wavFile.display();
