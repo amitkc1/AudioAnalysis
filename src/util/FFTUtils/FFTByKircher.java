@@ -177,7 +177,7 @@ public class FFTByKircher
         plot.addLegend("SOUTH");
 
         // put the PlotPanel in a JFrame like a JPanel
-        JFrame frame = new JFrame("FFTPrinceton");
+        JFrame frame = new JFrame("FFT");
         frame.setSize(600, 600);
         frame.setContentPane(plot);
         frame.setVisible(true);
