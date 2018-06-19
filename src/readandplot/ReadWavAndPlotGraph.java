@@ -5,14 +5,14 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import org.math.plot.Plot2DPanel;
+import util.AudioAnalysisBaseClass;
 import util.WavFile;
 import javax.swing.*;
 
-public class ReadWavAndPlotGraph
+public class ReadWavAndPlotGraph extends AudioAnalysisBaseClass
 {
 
-    private static double[][] allFramesArray;
-    private static List<Double> totalFramesData = new ArrayList<>();
+
     private static int FRAME_WIDTH = 600;
     private static int FRAME_HEIGHT = 600;
     private static double time[];
@@ -56,22 +56,6 @@ public class ReadWavAndPlotGraph
         }
     }
 
-    public static void convertListTo2DArray() {
-
-        int arrayCounter = 0;
-
-        for(int frameCounter = 0; frameCounter < totalFramesData.size(); frameCounter ++) {
-
-            if(frameCounter % 2 ==0) {
-                allFramesArray[0] [arrayCounter] = totalFramesData.get(frameCounter);
-            }
-
-            else {
-                allFramesArray [1] [arrayCounter] = totalFramesData.get(frameCounter);
-                arrayCounter++;
-            }
-        }
-    }
 
     public static void plot2dWavGraph() {
         JFrame frame = new JFrame("Chilling music Sound Plot");
